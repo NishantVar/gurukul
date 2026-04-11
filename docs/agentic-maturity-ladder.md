@@ -46,7 +46,7 @@ Baseline assumption:
 - `Vibing` does **not** mean chatting with a raw LLM in a blank text box
 - even at the first level, you are already working through an agentic environment
 
-The progression runs from natural use, to tool- and system-guided use, to explicit direction, to delegation, to orchestration, to reusable systems, to compounding leverage.
+The progression runs from natural use, to tool- and system-guided use, to explicit direction, to delegation, to orchestration, to reusable systems, to compounding leverage, and finally to systems that improve themselves.
 
 ## Scope And Tradeoffs
 
@@ -346,18 +346,16 @@ The difference is not just having more history. The difference is whether there 
 
 ## Quick Assessment
 
-Use these questions in order. Stop at the highest one that is consistently true.
+Work through the questions in order. Each question is a gate. Stop at the first one where the answer is consistently no — your level is the one just before it. If all eight are yes, you are at Level 8.
 
-1. Are you mostly using the coding agent naturally, without defining success or verification up front?
-2. Is your main advantage that the setup around the agent is carrying more of the work for you?
-3. Do you reliably define success criteria, constraints, and verification before the work starts?
-4. Do you regularly split work across bounded agents or runs with clear ownership?
-5. Do those agents operate in a stable division of labor with explicit coordination logic?
-6. Is that operating model encoded into reusable workflows, harnesses, or playbooks?
-7. Does prior work reliably improve future work through trusted memory, reusable artifacts, or accumulated context?
-8. Is there an outer loop that evaluates and improves the workflows, memory, prompts, roles, or harnesses themselves?
-
-If you answer "yes" to a higher question only occasionally, place yourself at the lower level that is true by default.
+1. When work starts, can you reliably state what success looks like and how you would verify it?
+2. Do you actively choose tools, environments, and codified workflows that carry good defaults for you — even if you did not design them yourself?
+3. Do you reliably define success criteria, constraints, and verification before the work starts — and does your work mostly live in a single thread or agent run?
+4. Do you regularly split work across bounded agents or runs with clear ownership, even if you rebuild the coordination manually each time?
+5. Do you run multiple agents with stable role definitions and explicit coordination logic — even if that coordination pattern has to be recreated manually for each project?
+6. Is your multi-agent operating model encoded into reusable workflows, harnesses, or playbooks that someone else could run without being you?
+7. Does prior work reliably improve future work through memory or artifacts you can retrieve, trust, and apply — not just store?
+8. Is there a deliberate, ongoing outer loop that evaluates how well the system is working and actively improves the workflows, memory, prompts, roles, or harnesses themselves — not just occasionally patches them?
 
 ## How To Use This Ladder
 
