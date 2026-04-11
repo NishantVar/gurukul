@@ -17,15 +17,7 @@ The curriculum follows the Agentic Maturity Ladder — seven levels of operating
 | 5 | **Orchestrating** | You run a coordinated team of agents with stable roles |
 | 6 | **Systemizing** | You build reusable harnesses, workflows, and guardrails |
 | 7 | **Compounding** | Prior work becomes trusted leverage that improves future work |
-
-### Vibe Coding
-Covers **Levels 1–2** (Vibing → Operating). How to use AI coding agents effectively — setup, tools, MCP, automation, and real projects. For developers moving from chat to agents.
-
-### Agentic Engineering
-Covers **Levels 3–5** (Directing → Orchestrating). How to give clear briefs, delegate bounded work, and run coordinated agent teams. For engineers ready to build beyond the defaults.
-
-### Compounding Engineering
-Covers **Levels 6–7** (Systemizing → Compounding). How to encode good practice into reusable infrastructure and make prior work improve future work automatically.
+| 8 | **Evolving** | The system observes, evaluates, and improves its own workflows, memory, and agents over time |
 
 ## Lesson Format
 
