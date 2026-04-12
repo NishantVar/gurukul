@@ -6,7 +6,7 @@ Sensei is a structured learning system where Claude Code acts as the instructor.
 
 ## Tracks
 
-The curriculum follows the Agentic Maturity Ladder — seven levels of operating sophistication with coding agents:
+The curriculum follows the Agentic Engineering Ladder — eight levels of operating sophistication with coding agents:
 
 | Level | Name | What it looks like |
 |-------|------|--------------------|
