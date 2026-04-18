@@ -8,16 +8,16 @@ Sensei is a structured learning system where Claude Code acts as the instructor.
 
 The curriculum follows the Agentic Engineering Ladder — eight levels of operating sophistication with coding agents:
 
-| Level | Name | What it looks like |
-|-------|------|--------------------|
-| 1 | **Vibing** | Using a coding agent naturally, judging results by feel |
-| 2 | **Operating** | The setup around the agent carries more of the work for you |
-| 3 | **Directing** | You define success, constraints, and verification before work starts |
-| 4 | **Delegating** | You assign bounded tasks to agents and review outputs |
-| 5 | **Orchestrating** | You run a coordinated team of agents with stable roles |
-| 6 | **Systemizing** | You build reusable harnesses, workflows, and guardrails |
-| 7 | **Compounding** | Prior work becomes trusted leverage that improves future work |
-| 8 | **Evolving** | The system observes, evaluates, and improves its own workflows, memory, and agents over time |
+| Level | Name | What you'll learn |
+|-------|------|-------------------|
+| 1 | **Vibing** | Use a coding agent for real work just by asking naturally — no special setup or expertise required |
+| 2 | **Operating** | Set up tools and environments that make your agent dramatically more capable — so you get better results without thinking harder |
+| 3 | **Directing** | Write briefs that get consistent, verifiable results — so you stop getting outputs that look right but aren't |
+| 4 | **Delegating** | Split complex work across multiple agents — so you can tackle bigger projects than any single agent can handle cleanly |
+| 5 | **Orchestrating** | Run a team of agents with defined roles and real handoffs — so complex, multi-part work gets done without you being the bottleneck |
+| 6 | **Systemizing** | Build workflows that combine deterministic steps with AI — so you reduce the uncertainty in agent behavior and dramatically improve accuracy and reliability |
+| 7 | **Compounding** | Structure memory and context so past work carries forward — so every task you do makes the next one better |
+| 8 | **Evolving** | Build a feedback loop that improves your whole system over time — so it keeps getting better even when you're not actively working on it |
 
 ## Lesson Format
 

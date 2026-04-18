@@ -301,16 +301,18 @@ Failure mode:
 
 - builds recursive complexity with weak evaluation
 
-## One-Line Summary
+## Level Summaries
 
-- `Vibing`: using a coding agent in the most natural way
-- `Operating`: using tools and system help that codify the why for you
-- `Directing`: defining success clearly
-- `Delegating`: giving bounded work to agents
-- `Orchestrating`: running a coordinated team of agents
-- `Systemizing`: building reusable workflows and harnesses
-- `Compounding`: making prior work improve future work
-- `Evolving`: making the system improve itself over time
+| Level | Motivation | What you'll learn | Technical definition |
+|-------|------------|-------------------|----------------------|
+| **1. Vibing** | The fastest way to build something real is a conversation | Use a coding agent for real work just by asking naturally — no special setup or expertise required | Using a coding agent in the most natural way |
+| **2. Operating** | The right setup makes you feel like you have superpowers you didn't earn yet | Set up tools and environments that make your agent dramatically more capable — so you get better results without thinking harder | Using tools and system help that codify the why for you |
+| **3. Directing** | The agent is only as good as the brief you give it | Write briefs that get consistent, verifiable results — so you stop getting outputs that look right but aren't | Defining success, constraints, and verification explicitly before work starts |
+| **4. Delegating** | One person with the right agents can do what used to take a team | Split complex work across multiple agents — so you can tackle bigger projects than any single agent can handle cleanly | Assigning bounded tasks to agents with clear ownership and reviewing outputs |
+| **5. Orchestrating** | A well-run agent team can outship an entire engineering department | Run a team of agents with defined roles and real handoffs — so complex, multi-part work gets done without you being the bottleneck | Running a stable division of agents with explicit coordination logic, sequencing, and synthesis |
+| **6. Systemizing** | Stop relying on memory and luck — make good outcomes the default | Build workflows that combine deterministic steps with AI — so you reduce the uncertainty in agent behavior and dramatically improve accuracy and reliability | Encoding your operating model into reusable harnesses, nodes, evals, and guardrails |
+| **7. Compounding** | The best engineers don't start from scratch. Neither should your system | Structure memory and context so past work carries forward — so every task you do makes the next one better | Making prior work into trusted, retrievable leverage that improves future work |
+| **8. Evolving** | The ceiling keeps rising when the system improves itself | Build a feedback loop that improves your whole system over time — so it keeps getting better even when you're not actively working on it | Building an outer loop that observes, evaluates, and improves the agentic system itself |
 
 ## The Hardest Boundaries
 
