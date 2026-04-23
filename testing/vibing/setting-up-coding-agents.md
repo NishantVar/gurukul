@@ -1,14 +1,14 @@
 ---
 title: Setting Up Coding Agents
-created: 2026-04-14
-updated: 2026-04-14
+created: 2026-04-20
+updated: 2026-04-20
 track: vibing
 order: 1
 prerequisites: []
 tags:
   - setup
-  - claude-code
   - coding-agents
+  - claude-code
 content_type: lesson
 lesson_format: lab
 prompt: "[[gurukul/prompts/vibing/setting-up-coding-agents]]"
@@ -16,66 +16,79 @@ prompt: "[[gurukul/prompts/vibing/setting-up-coding-agents]]"
 
 # Setting Up Coding Agents
 
-Get an AI agent running on your machine and have a real conversation with it — no code, no repositories, no developer background needed. Unlike chatting with AI in a browser, a coding agent can actually *do things* on your computer: read and create files, search the web, install software, and automate tasks. By the end of this lesson, you'll have one set up and working.
+In about 20 minutes, **the chaos on your desktop will be sorted into folders that actually make sense** — not by you, but by a coding agent running in your terminal that you set up from scratch. By the end you'll see firsthand why people keep saying *"the agent just does it."*
 
-## Success State
+## Why this matters
 
-You have a coding agent installed and running in your terminal. You've given it a plain-English prompt, it responded with something useful, and you're looking at the result. The whole thing took less than 15 minutes.
+A coding agent is not a chatbot in a browser tab. **It runs on your machine, can read and write files, and can take actions you approve.** That is the leap. Everything else in this curriculum — better prompts, bigger projects, multi-agent setups — assumes you already have an agent that can touch the real world. This lesson gets you there.
 
-## The Task
+We'll use **Claude Code** as the primary example because it's what we recommend in this curriculum, but **Codex CLI** and **Gemini CLI** work the same way at this level. Pick whichever matches the subscription you already have.
 
-We'll set up **Claude Code** — Anthropic's coding agent. It runs in your terminal and can read/write files, browse the web, run commands, and build things for you.
+## What you need
 
-### Install Claude Code
+- A terminal app (Terminal on Mac, Windows Terminal on Windows, anything on Linux)
+- A subscription or account with **at least one** of: Claude (Pro or Max), ChatGPT (Plus or Pro), or a Google account for Gemini *(Gemini has the most generous free tier if you don't want to pay yet)*
+- **A desktop you don't mind letting an agent touch**
 
-**If you already have a coding agent** (Cursor, Windsurf, Codex, etc.), tell it:
+If you've never opened a terminal before, that's fine — *you'll mostly be typing in plain English once setup is done.* On Mac, press **Cmd+Space**, type "Terminal," hit Enter. On Windows, search for **Terminal** in the Start menu.
 
-> Install Claude Code globally using npm.
+## The task
 
-It will handle the rest. Skip to **Launch it** below.
+### Step 1 — Install one coding agent
 
-**If this is your first agent** — a small catch-22: you need to run one terminal command to bootstrap the agent that will handle everything else going forward. Open your terminal (on Mac, search for "Terminal" in Spotlight) and paste:
+Pick **one** based on which subscription you have. You only need one to do this lesson.
 
-```
-npm install -g @anthropic-ai/claude-code
-```
+| Tool | Install page |
+|------|--------------|
+| **Claude Code** *(recommended)* | https://docs.claude.com/en/docs/claude-code/overview |
+| **Codex CLI** | https://github.com/openai/codex |
+| **Gemini CLI** | https://github.com/google-gemini/gemini-cli |
 
-npm is an installer that comes with Node.js (a free program that lets tools like Claude Code run on your computer). If the command fails with "npm: command not found," you need Node.js first — visit [nodejs.org](https://nodejs.org), download the installer, then run the command above again.
+Each install page has a one-line command to copy into your terminal. Run it, then run the tool's command (`claude`, `codex`, or `gemini`) and follow the prompts to log in with your existing subscription account.
 
-### Launch it
+**This is the only time you'll run setup commands by hand.** Once the agent is running, you talk to it in plain English. *(You don't need an API key — your normal subscription login works. An API key is a password-like token developers use to call models programmatically; you don't need one for this.)*
 
-Type `claude` in your terminal and press Enter. The first time, it will ask you to sign in with your Anthropic account (a Claude Pro or Max subscription works).
+### Step 2 — Launch the agent on your desktop
 
-### Give it a prompt
+Start a fresh terminal in your Desktop folder and run `claude` (or `codex` / `gemini`). On Mac you can right-click the Desktop in Finder and pick "New Terminal at Folder." On Windows, open Terminal and type `cd Desktop` before running the tool.
 
-Once Claude Code is running, try this:
+### Step 3 — Ask it to reorganize your desktop
 
-> What's the weather like in my city today? Search the web and give me a quick summary.
+Ask the agent something like:
 
-That's it. Plain English, no special syntax. Claude Code will ask your permission before taking actions (like searching the web) — these are called "tool uses." Say yes when it asks.
+> My desktop is a mess. Look at what's here and propose a clean folder structure that groups things by category. Don't move anything yet — just show me the plan first.
+
+Read what it suggests. If the grouping looks reasonable, tell it to go ahead. The agent will ask for permission before each batch of file moves — approve them. If anything looks off, say so in plain English ("group by file type instead" or "leave the screenshots alone") and let it adjust.
+
+**Don't point an agent at folders full of irreplaceable files you haven't backed up, and stay away from system folders.** The Desktop is a great first target precisely because it's low-stakes — *you can always drag things back if you don't like the result.*
 
 ## Verify
 
-You should see:
-- Claude Code launched without errors
-- It searched the web (you approved a permission prompt to let it do this)
-- It gave you a weather summary in your terminal
+You're done when **all three** of these are true:
 
-If all three happened, you're set up and working.
+1. Running the agent's command (`claude`, `codex`, or `gemini`) opens an interactive prompt in your terminal — not an error.
+2. Your desktop has noticeably fewer loose files and a few new folders with sensible names like `Screenshots`, `PDFs`, `Installers`, or `Old Projects`.
+3. You can open one of the new folders and recognize why each file landed there.
 
-## Common Failure Modes
+If any of those isn't true, see the failure modes below.
 
-**"command not found: claude"** — The install didn't fully work. Paste the exact error message into [claude.ai](https://claude.ai) or any AI chat and ask it to help you fix the problem. Most likely Node.js didn't install correctly, or your terminal can't find the program yet.
+## Common failure modes
 
-**Sign-in loop or authentication error** — You need an active Claude Pro or Max subscription at [claude.ai](https://claude.ai). Free-tier accounts don't include Claude Code access.
+**The install command fails with "command not found" or a permission error.**
+Most install commands need either Node.js (for Claude Code) or another runtime already on your machine. The install pages list prerequisites near the top — read those first. On Mac, you may need to run the command with `sudo` or install via Homebrew. *Don't paste random `sudo` commands you don't recognize.*
 
-**"Permission denied" during install** — Don't add `sudo` to the command. Instead, paste the error into any AI chat and ask "How do I fix npm global install permissions on Mac without sudo?" It will walk you through it.
+**The agent says it can't access your desktop or files.**
+You probably started it from the wrong folder, or your OS is blocking file access. Quit the agent, run `cd ~/Desktop` again, then restart it. On macOS, your terminal app may need **Full Disk Access** in System Settings → Privacy & Security.
 
-## Other Agents
+**The agent moves files to weird places or makes a worse mess.**
+This happens. Tell it: *"Undo the last set of moves and try again — group by file type instead of by topic."* You can also drag things back manually. **The fix is almost always to give the agent a clearer instruction, not to switch tools.**
 
-Claude Code is the recommended starting point for this curriculum, but the ideas transfer. Two alternatives if you prefer a different ecosystem:
+## Going further
 
-- **[OpenAI Codex CLI](https://github.com/openai/codex)** — OpenAI's terminal agent. Requires an OpenAI account.
-- **[Google Gemini CLI](https://github.com/google-gemini/gemini-cli)** — Google's terminal agent. Requires a Google account.
+Once your desktop is clean, try one of these in the same agent session:
 
-Both install via npm (check the links above for the exact command) and work the same way: you type a plain-English request, the agent acts, and you approve or guide the result. Once you've used one, switching to another is straightforward — the prompts in this curriculum work with any of them.
+- *"Look at my Downloads folder and do the same thing — propose a structure first, then move."*
+- *"Find any duplicate files on my desktop and tell me which ones I can safely delete."*
+- *"Write a one-paragraph summary of what was on my desktop before you cleaned it up."*
+
+Each of these uses the same pattern: **ask in plain English, review what it proposes, approve the action.** That pattern is the whole foundation of working with coding agents — everything later in this curriculum is just sharper versions of it.
